@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wypozyczalnia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500" rel="stylesheet">
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Mustache.js -->
+    <script type="application/javascript" src="js/libs/mustache.min.js"></script>
+    <script type="application/javascript">
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('content loaded');
+            $.get('header.mst.html', function (template) {
+                var tpl = new XMLSerializer().serializeToString(template.documentElement);
+                // activeList, activeAdd, activeEdit, activeCustomers
+                var rendered = Mustache.render(tpl, {headerTitle: "Nagłówek z Mustache", activeList: true});
+                $('#main-nav').html(rendered);
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+<div class="wrapper">
+
+    <div id="main-nav"></div>
+
+    <div class="blue-section">
+        <div class="container">
+            <div class="filter">
+                <h1>Filtruj</h1>
+                <form>
+                    <div class="checkbox">
+                        <div>
+                            <div>
+                                <label><input type="checkbox" name="wszystkie" value="wszystkie">
+                                    Wszystkie
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" name="dostepne" value="dostepne">
+                                    Tylko dostępne
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="checkbox" id="wypożyczone" name="wypożyczone" value="wypożyczone">
+                                    Tylko wypożyczone
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="gray-section admin-section">
+        <div class="container">
+            <form name="addNewCarForm">
+                <div class="column">
+                    <input type="text" name="name" placeholder="Nazwa pojazdu"/>
+                </div>
+                <div class="column">
+                    <input type="number" name="year" placeholder="Rocznik"/>
+                </div>
+                <div class="column">
+                    <button class="button button-blue">Dodaj</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="gray-section admin-section">
+        <div class="container">
+            <table class="carsTable">
+                <thead>
+                <tr>
+                    <th>Auto</th>
+                    <th>Rok</th>
+                    <th>Dostępność</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="hover-link">Subaru
+                        <img class="hover-img" alt="subaru" src="images/car-1.png"/>
+                    </td>
+                    <td>2017</td>
+                    <td>Dostępne</td>
+                    <td><a>Usuń</a></td>
+                </tr>
+                <tr>
+                    <td class="hover-link">Fiat
+                        <img class="hover-img" alt="fiat" src="images/car-2.png"/>
+                    </td>
+                    <td>2007</td>
+                    <td class="inactive">Niedostępne</td>
+                    <td><a>Usuń</a></td>
+                </tr>
+                <tr>
+                    <td class="hover-link">BMW
+                        <img class="hover-img" alt="bmw" src="images/car-3.png"/>
+                    </td>
+                    <td>2011</td>
+                    <td>Dostępne</td>
+                    <td><a>Usuń</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2017</p>
+    </footer>
+</div>
+
+<script type="application/javascript" src="js/CarsRentaApplication.js"></script>
+
+</body>
+</html>

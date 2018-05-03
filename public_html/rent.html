@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wypozyczalnia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <nav class="navbar navbar-brown">
+        <div class="navbar-brand">
+            <a href="index.html">
+                <img alt="Wypożyczalnia" src="images/logo.png"/>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="admin.html">Admin</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="blue-section">
+        <div class="container">
+            <div class="filter">
+                <h1>Filtruj</h1>
+                <form>
+                    <div class="column">
+                        <label for="marka">Marka:</label>
+                        <select id="marka" name="marka">
+                            <option value="wszystkie">Wszystkie</option>
+                            <option value="bmw">BMW</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="subaru">Subaru</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label for="cena">Cena:</label>
+                        <div class="in-one-line">
+                            <input placeholder="od" type="text" id="cena" name="od">
+                            <div>-</div>
+                            <input placeholder="do" type="text" id="cena" name="do">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label for="rok">Rok:</label>
+                        <div class="in-one-line">
+                            <input placeholder="od" type="text" id="rok" name="od">
+                            <div>-</div>
+                            <input placeholder="do" type="text" id="cena" name="do">
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>Paliwo:</label>
+                        <div>
+                            <div>
+                                <input type="checkbox" id="dizel" name="dizel" value="dizel">
+                                <label>Diesel</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="benzyna" name="benzyna" value="benzyna">
+                                <label>Benzyna</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="gaz" name="gaz" value="gaz">
+                                <label>Gaz</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <button class="button button-violet">Filtruj</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="gray-section">
+        <div class="container">
+            <div class="inline-tile-box">
+                <div class="tile">
+                    <div class="tile-header">Subaru</div>
+                    <img class="tile-img" alt="Fiat" src="images/car-1.png"/>
+                    <table class="tile-description">
+                        <tbody>
+                        <tr>
+                            <td>Miejsc</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Lączny limit kilometrów:</td>
+                            <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>Kaucja</td>
+                            <td>Brak</td>
+                        </tr>
+                        <tr>
+                            <td>Cena za dobę</td>
+                            <td>230 zł</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="tile-action">
+                        <a>Zarezerwuj!</a>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-header">Fiat</div>
+                    <img class="tile-img" alt="Fiat" src="images/car-2.png"/>
+                    <table class="tile-description">
+                        <tbody>
+                        <tr>
+                            <td>Miejsc</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Lączny limit kilometrów:</td>
+                            <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>Kaucja</td>
+                            <td>Brak</td>
+                        </tr>
+                        <tr>
+                            <td>Cena za dobę</td>
+                            <td>100 zł</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="tile-action">
+                        <a>Zarezerwuj!</a>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile-header">BMW</div>
+                    <img class="tile-img" alt="Fiat" src="images/car-3.png"/>
+                    <table class="tile-description">
+                        <tbody>
+                        <tr>
+                            <td>Miejsc</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Lączny limit kilometrów:</td>
+                            <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>Kaucja</td>
+                            <td>Brak</td>
+                        </tr>
+                        <tr>
+                            <td>Cena za dobę</td>
+                            <td>90 zł</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="tile-action">
+                        <a>Zarezerwuj!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2017</p>
+    </footer>
+    <div id="overlay">
+        <div class="overlay-content">
+            <div class="name">Nazwa: <span></span></div>
+            <div class="seats">Miejsca: <span></span></div>
+            <div class="limit">Limit: <span></span></div>
+            <img src="" alt="Samochod"/>
+            <button class="button-white">OK</button>
+        </div>
+    </div>
+</div>
+
+<script type="application/javascript" src="js/overlay.js"></script>
+</body>
+</html>

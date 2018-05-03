@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wypozyczalnia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/js-vs-jquery.js"></script>
+
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500" rel="stylesheet">
+
+    <!--Skrypt osadzony na stronie HTML-->
+    <!--<script type="text/javascript">-->
+    <!--//            alert('Welcome from JavaScript!');-->
+    <!--console.log('Witamy w debuggerze');-->
+    <!--</script>-->
+
+    <!--Skrypt dołączony z zewnętrznego pliku-->
+    <!--<script type="text/javascript" src="js/example1.js" ></script>-->
+
+    <!--<script type="text/javascript" src="js/addPixels.js" ></script>-->
+
+    <!--<script type="text/javascript" src="js/pojazdy.js"></script>-->
+
+
+    <script type="text/javascript" src="js/oo.js"></script>
+
+</head>
+<body>
+<h1>cos tam</h1>
+<div class="wrapper">
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <img alt="Wypożyczalnia" src="images/logo.png"/>
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="admin.html">Admin</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-title">
+            <h1>rezerwacja online</h1>
+            <h1><span>24 / 7</span></h1>
+            <a class="button button-blue" href="rent.html">Zarezerwuj</a>
+        </div>
+    </header>
+    <div class="gray-section">
+        <div class="container">
+            <h2>Posiadamy flotę kilkuset nowych i bogato wyposażonych pojazdów.<br>
+                Posiadamy <b>samochody wszystkich klas</b> i różnych marek.
+            </h2>
+            <h3><span class="blue">Skontaktuj się z nami</span> - a pomozemy Ci wybrać najlepszą ofertę.
+            </h3>
+        </div>
+    </div>
+    <div class="brown-section">
+        <div class="container">
+            <div class="blue-section">
+                <form method="get" action="rent.html">
+                    <div class="column">
+                        <label for="date">Data odbioru:</label>
+                        <input placeholder="12-12-2017" type="text" id="date" name="date">
+                    </div>
+                    <div class="column">
+                        <label for="place">Miejsce odbioru:</label>
+                        <select id="place" name="place">
+                            <option value="lotnisko">1. Wroclaw Lotnisko</option>
+                            <option value="galeria">2. Galeria Dominikanska</option>
+                            <option value="bielany">3. Bielany Wroclawskie</option>
+                        </select>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree" name="agree" value="agree">
+                        <label for="agree">Zgadzam się z <a class="link">Regulaminem</a>.</label>
+                    </div>
+                    <div class="form-button">
+                        <button class="button button-violet">Wybierz auto</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2017</p>
+    </footer>
+</div>
+
+<!--<script type="text/javascript" src="js/welcome.js" ></script>-->
+<!--<script type="text/javascript" src="js/events.js"></script>-->
+
+
+<script type="text/javascript" src="js/scroll.js"></script>
+
+<!--<script type="text/javascript" src="js/example1.js"></script>-->
+
+</body>
+</html>
