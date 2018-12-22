@@ -25,10 +25,12 @@ var UiService = (function () {
         var tdName = getTableCell(car.name);
         var tdYear = getTableCell(car.year);
         var tdAvailability = getTableCell(car.available ? "Dostępny" : "Niedostępny");
+        var tdDelete = getTableCell("usuń");
 
         tr.appendChild(tdName);
         tr.appendChild(tdYear);
         tr.appendChild(tdAvailability);
+        tr.appendChild(tdDelete);
 
         return tr;
     }
